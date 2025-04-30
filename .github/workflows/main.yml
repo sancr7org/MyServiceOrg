@@ -24,3 +24,6 @@ jobs:
        
        echo "REPOVAR1: ${{vars.REPOVAR1}}"
        echo "REPOVAR2: ${{vars.REPOVAR2}}"
+    - name: Test2
+      uses: ./github/actions/test@main
+     
