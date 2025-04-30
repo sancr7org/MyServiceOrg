@@ -1,0 +1,13 @@
+name: 'Test composite action'
+description: 'Update Nuget Package with Github Source in NuGet.Config file'
+inputs:
+  GH_PACKAGE_PAT:
+    description: 'Personal Access Token with repo and package permissions'
+    required: false
+runs:
+  using: "composite"
+  steps:
+    - name: step2
+      shell: pwsh
+      run: |
+        echo "${{steps.Test.outputs.ORGVAR1}}"
