@@ -17,7 +17,9 @@ on:
     secrets:
        secret1:
          required: false
-      
+
+run-name: ${{ github.event_name == 'workflow_dispatch' && format('CI/CD-{0}-branch-{1}', tojson(inputs), github.ref_name) || '' }}
+
 jobs:
   build:
    runs-on: windows-2025
