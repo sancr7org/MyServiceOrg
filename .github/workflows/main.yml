@@ -24,6 +24,7 @@ jobs:
        
        echo "REPOVAR1: ${{vars.REPOVAR1}}"
        echo "REPOVAR2: ${{vars.REPOVAR2}}"
+
+    # path to the action file
     - name: Test2
-      uses: ./github/actions/test@main
-     
+      uses: sancr7org/MyServiceOrg/.github/actions/test@main  
