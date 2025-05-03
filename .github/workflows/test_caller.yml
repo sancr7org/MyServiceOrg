@@ -1,0 +1,15 @@
+name: Calling Resuable Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:  [main]
+  pull_request:
+    branches:  [main]
+
+jobs:
+  caller_job:
+    uses: sancr7org/MyServiceOrg/.github/workflows/test_dispatch@main
+    #with:
+    #  project-name: ${{ vars.PROJECT_NAME }}
+    #  use-rabbitmq: ${{ vars.USE_RABBITMQ }}
