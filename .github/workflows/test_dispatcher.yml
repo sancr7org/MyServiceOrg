@@ -1,12 +1,5 @@
 name: Calling Reusable Workflow
 
-#on:
-#  workflow_dispatch:
-#  push:
-#    branches:  [main]
-#  pull_request:
-#    branches:  [main]
-    
 on:
   workflow_dispatch:
     inputs:
@@ -26,7 +19,8 @@ on:
 # run-name: ${{ github.event_name == 'workflow_dispatch' && format('CI/CD-{0}-branch-{1}', tojson(inputs), github.ref_name) || '' }}
 #run-name: Deploy to ${{ inputs.param1 }} by @${{ github.actor }}
 # Dynamically set the run name to include the type of branch (feature or bugfix), branch name, and the user
-run-name: "${{ contains(github.head_ref, 'feature/') && 'Feature' || contains(github.head_ref, 'bugf/') && 'Bug' || 'Update' }}: ${{ github.head_ref }} by @${{ github.actor }}"
+#run-name: "${{ contains(github.head_ref, 'feature/') && 'Feature' || contains(github.head_ref, 'bugf/') && 'Bug' || 'Update' }}: ${{ github.head_ref }} by @${{ github.actor }}"
+run-name: "${{ contains(github.head_ref, 'feature/') && 'Feature' || contains(github.head_ref, 'bugf/') && 'Bug'}}: ${{ github.head_ref }} by @${{ github.actor }}"
 
 jobs:
   caller_job:
