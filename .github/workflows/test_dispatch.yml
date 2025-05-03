@@ -1,5 +1,8 @@
 name: Dispatch on Workflow Call
 
+# this workflow can take inputs and run the jobs
+# this is a resuable workflow
+# to run this from UI, this has to be triggered atleast once?
 on:
   workflow_call:
     inputs:
