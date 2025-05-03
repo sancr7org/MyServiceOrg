@@ -1,0 +1,29 @@
+name: Test Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - release/*  
+      - feature/*
+      - bugfix/*
+  pull_request:
+    branches:
+      - main    
+
+jobs:
+  build:
+   runs-on: windows-2025
+   steps:
+    - name: Test
+      run: |
+       echo "Test"
+       echo "ORGVAR1: ${{vars.ORGVAR1}}"
+       echo "ORGVAR2: ${{vars.ORGVAR2}}"
+       
+       echo "REPOVAR1: ${{vars.REPOVAR1}}"
+       echo "REPOVAR2: ${{vars.REPOVAR2}}"
+    
+    - name: Test2
+      uses: ./github/actions/test@main 
