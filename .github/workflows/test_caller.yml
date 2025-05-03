@@ -9,7 +9,7 @@ on:
 
 jobs:
   caller_job:
-    uses: sancr7org/MyServiceOrg/.github/workflows/test_dispatch@main
+    uses: sancr7org/MyServiceOrg/.github/workflows/test_dispatch.yml@main
     #with:
     #  project-name: ${{ vars.PROJECT_NAME }}
     #  use-rabbitmq: ${{ vars.USE_RABBITMQ }}
