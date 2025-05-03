@@ -1,11 +1,23 @@
 name: Calling Reusable Workflow
 
+#on:
+#  workflow_dispatch:
+#  push:
+#    branches:  [main]
+#  pull_request:
+#    branches:  [main]
+    
 on:
   workflow_dispatch:
-  push:
-    branches:  [main]
-  pull_request:
-    branches:  [main]
+    inputs:
+      service:
+        description: 'Name of the service'
+        required: true
+        default: 'rabbitmq'
+      version:
+        description: 'Version to run'
+        required: false
+        default: 'v1.0'
 
 jobs:
   caller_job:
