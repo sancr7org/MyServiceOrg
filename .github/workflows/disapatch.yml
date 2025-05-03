@@ -1,4 +1,4 @@
-name: Test Workflow
+name: Dispatch on Workflow Call
 
 on:
   workflow_call:
@@ -28,5 +28,5 @@ jobs:
        echo "REPOVAR1: ${{vars.REPOVAR1}}"
        echo "REPOVAR2: ${{vars.REPOVAR2}}"
     
-    - name: Test2
-      uses: ./github/actions/test@main 
+    #- name: Test2
+    #  uses: ./github/actions/test@main 
