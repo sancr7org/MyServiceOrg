@@ -10,6 +10,6 @@ on:
 jobs:
   caller_job:
     uses: sancr7org/MyServiceOrg/.github/workflows/test_dispatch.yml@main
-    #with:
-    #  project-name: ${{ vars.PROJECT_NAME }}
-    #  use-rabbitmq: ${{ vars.USE_RABBITMQ }}
+    with:
+      param1: "test1"
+      param2: "test2"
