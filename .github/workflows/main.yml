@@ -27,4 +27,8 @@ jobs:
 
     # path to the action file
     - name: Test2
-      uses: sancr7org/MyServiceOrg/.github/actions/test@main  
+      uses: sancr7org/MyServiceOrg/.github/actions/test@main
+
+    # okay to run like this for once QD
+    - name: Test3
+      uses: sancr7org/MyServiceOrg/.github/workflows/test_dispatch@main
