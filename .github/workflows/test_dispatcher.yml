@@ -10,18 +10,18 @@ name: Calling Reusable Workflow
 on:
   workflow_dispatch:
     inputs:
-      service:
-        description: 'Name of the service'
+      param1:
+        description: 'test1'
         required: true
-        default: 'rabbitmq'
-      version:
+        default: 'param1'
+      param2:
         description: 'Version to run'
-        required: false
-        default: 'v1.0'
+        required: true
+        default: 'param2'
 
 jobs:
   caller_job:
     uses: sancr7org/MyServiceOrg/.github/workflows/test_workflow_call.yml@main
     with:
-      param1: "test1"
-      param2: "test2"
+      param1: ${{inputs.param1}}
+      param2: ${{inputs.param2}}
