@@ -2,17 +2,17 @@ name: Dispatch on Workflow Call
 
 # this workflow can take inputs and run the jobs
 # this is a resuable workflow
-# to run this from UI, this has to be triggered atleast once?
+# to run this from UI, this has to be triggered atleast once? or required=true ?
 on:
   workflow_call:
     inputs:
       param1:
-        description: 'test'
-        required: false
+        description: 'test1'
+        required: true
         type: string
       param2:
-        description: 'test'
-        required: false
+        description: 'test2'
+        required: true
         type: string
     secrets:
        secret1:
