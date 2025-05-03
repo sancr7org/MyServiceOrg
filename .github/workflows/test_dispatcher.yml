@@ -9,7 +9,7 @@ on:
 
 jobs:
   caller_job:
-    uses: sancr7org/MyServiceOrg/.github/workflows/test_dispatch.yml@main
+    uses: sancr7org/MyServiceOrg/.github/workflows/test_workflow_call.yml@main
     with:
       param1: "test1"
       param2: "test2"
