@@ -1,5 +1,5 @@
 name: 'Test composite action'
-description: 'Update Nuget Package with Github Source in NuGet.Config file'
+description: 'Test all there is for composite actions'
 inputs:
   GH_PACKAGE_PAT:
     description: 'Personal Access Token with repo and package permissions'
@@ -10,4 +10,7 @@ runs:
     - name: step2
       shell: pwsh
       run: |
+        # direct output from previous steps wont work.
+          # 1st = use inputs from main workflow
+          # 2nd = set and use outputs from other main actions or also composite actions. test ?
         echo "${{steps.Test.outputs.ORGVAR1}}"
