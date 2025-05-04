@@ -1,0 +1,13 @@
+name: This is a webhook test
+
+on:
+  respository_dispatch:
+    types:
+      - webhook
+      
+jobs:
+  runs-on: wundows-2025
+    repository_dispatch_job:
+      steps:
+        - name: Test
+          run: echo "Hello dispatcher"
