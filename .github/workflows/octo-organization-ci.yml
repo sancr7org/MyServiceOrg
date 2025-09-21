@@ -1,0 +1,14 @@
+name: Octo Organization CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Run a one-line script
+        run: echo Hello from Octo Organization
+      - run: echo "This workflow is created using template from org ${{github.repositorz%%/*}} and ${{github.actor_name}}"
