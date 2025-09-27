@@ -1,0 +1,13 @@
+name: Build Java Project
+on:
+  push:
+    branches: [ "main", "features/*"]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Run Script Step
+        run: echo "Hello from Build Java Project"
